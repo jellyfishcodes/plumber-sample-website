@@ -1,7 +1,7 @@
 /* GLOBAL RESET & VARIABLES */
 :root {
     --primary: #0f172a; /* Navy Blue */
-    --accent: #ff6b00;  /* Safety Orange */
+    --accent: #ea580c;  /* Safety Orange */
     --light: #f8fafc;
     --text: #334155;
     --font-main: 'Inter', sans-serif;
@@ -68,7 +68,7 @@ header {
 
 .nav-cta {
     background: var(--accent);
-    color: white;
+    color: var(--primary);
     padding: 8px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -195,7 +195,7 @@ header {
 
 .call-btn {
     background: var(--accent);
-    color: white;
+    color: var(--primary);
     width: 100%;
     max-width: 400px;
     padding: 15px;
