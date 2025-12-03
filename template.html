@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- DYNAMIC: CHANGE TITLE HERE -->
+    <title>Emergency Plumber in <span class="dynamic-city">Sydney</span> | Sydney Metro</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER (Same as Home) -->
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">SYDNEY<span>METRO</span></div>
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="#" class="nav-cta">0400 123 456</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- DYNAMIC LOCATION BANNER -->
+    <div class="location-banner">
+        <!-- DYNAMIC: CHANGE SUBURB HERE -->
+        📍 We are currently servicing <u><span class="dynamic-city">Sydney</span></u> and surrounding areas.
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="container hero-container">
+            <!-- DYNAMIC: CHANGE KEYWORD HERE -->
+            <h1>Emergency Plumber in <span style="color:var(--accent)"><span class="dynamic-city">Sydney</span></span></h1>
+            
+            <p>Local, trusted experts arriving in <b><span class="dynamic-city">Sydney</span></b> within 60 minutes.</p>
+            <a href="tel:0400123456" class="nav-cta" style="font-size: 1.2rem;">Call 0400 123 456</a>
+        </div>
+    </div>
+
+    <!-- CONVERSION FORM SECTION -->
+    <section class="container services">
+        
+        <div class="grid-3">
+            <!-- Left: Why Choose Us -->
+            <div class="grid-3-content">
+                <h2>Why <span class="dynamic-city">Sydney</span> locals trust us</h2>
+                <br>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 15px;">✅ <b>$0 Call Out Fee</b> for <span class="dynamic-city">Sydney</span> residents.</li>
+                    <li style="margin-bottom: 15px;">✅ <b>Seniors Discount</b> available.</li>
+                    <li style="margin-bottom: 15px;">✅ <b>Lifetime Guarantee</b> on workmanship.</li>
+                </ul>
+            </div>
+
+            <!-- Right: Lead Form -->
+            <div class="services-right-side">
+                <div class="service-card" style="background: #f0f9ff; border: 2px solid var(--primary);">
+                <h3 style="text-align: center;">Get a Fast Quote</h3>
+                <form style="display: flex; flex-direction: column; gap: 10px;">
+                    <input type="text" placeholder="Your Name" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="tel" placeholder="Phone Number" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <select style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option>Blocked Drain</option>
+                        <option>No Hot Water</option>
+                        <option>Leaking Pipe</option>
+                        <option>Other</option>
+                    </select>
+                    <button style="background: var(--primary); color: white; border: none; padding: 12px; border-radius: 4px; font-weight: bold; cursor: pointer;">Request Callback</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOBILE STICKY CTA -->
+    <div class="sticky-cta">
+        <a href="tel:0400123456" class="call-btn">📞 Call <span class="dynamic-city">Sydney</span> Plumber</a>
+    </div>
+
+    <script>
+        // 1. Get the URL parameters (e.g. ?city=Bondi)
+        const params = new URLSearchParams(window.location.search);
+        
+        // 2. Check if 'city' exists in the URL. If not, default to 'Sydney'
+        const cityFromUrl = params.get('city');
+        
+        if (cityFromUrl) {
+            // 3. Find ALL elements with the class 'dynamic-city'
+            const elements = document.querySelectorAll('.dynamic-city');
+            
+            // 4. Loop through them and update the text
+            elements.forEach(element => {
+                element.textContent = cityFromUrl;
+            });
+
+            // 5. Update the Page Title (Browser Tab)
+            document.title = `Emergency Plumber in ${cityFromUrl} | Sydney Metro`;
+        }
+    </script>
+
+</body>
+</html>
